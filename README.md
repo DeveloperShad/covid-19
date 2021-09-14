@@ -30,19 +30,19 @@ Please fork the repository and then go to any code editor and click on go with l
 
 1. Landing Page
 
-   ![Covid-19](https://github.com/developershad/COVID1-19/blob/develop/images/covid-19%20home.PNG)
+   ![Covid-19](https://github.com/DeveloperShad/covid-19/blob/master/images/COVID-19%20World%20Data%20home.png)
 
 2. Vaccine News Page
 
-   ![Covid-19](https://github.com/developershad/COVID1-19/blob/develop/images/vaccine.PNG)
+   ![Covid-19](https://github.com/DeveloperShad/covid-19/blob/master/images/COVID-19%20World%20Data%20vaccine%20news.png)
 
 3. Health News Page
 
-   ![Covid-19](https://github.com/developershad/COVID1-19/blob/develop/images/health%20news.PNG)
+   ![Covid-19](https://github.com/DeveloperShad/covid-19/blob/master/images/COVID-19%20World%20Data%20health%20news.png)
 
 4. Coronavirus News Page
 
-   ![Covid-19](https://github.com/developershad/COVID1-19/blob/develop/images/coronavvirus.PNG)
+   ![Covid-19](https://github.com/DeveloperShad/covid-19/blob/master/images/COVID-19%20World%20Data%20coronavirus%20news.png)
 
 <br>
 
