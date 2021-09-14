@@ -53,7 +53,8 @@ fetch(`https://vaccovid-coronavirus-vaccine-and-treatment-tracker.p.rapidapi.com
             }
         }
         // console.log(arr)
-        ShowData(arr, container)
+        // ShowData(arr, container)
+        ShowData(arr,container)
 
     })
     .catch(err => {
@@ -63,6 +64,7 @@ fetch(`https://vaccovid-coronavirus-vaccine-and-treatment-tracker.p.rapidapi.com
 
 
 
+ 
 
 
 
@@ -86,6 +88,7 @@ function ShowData(arr, container) {
       </select>
     </div>`
     container.append(sort_div)
+   
     let display_div = document.createElement('div')
     display_div.id = 'display'
 
