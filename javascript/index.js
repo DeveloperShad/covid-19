@@ -16,17 +16,17 @@ var perpage_data;
 
 
 
-fetch(`https://restcountries.eu/rest/v2/all`)
-    .then(response => {
-        return response.json();
-    })
-    .then(response => {
-        country_data = response
-        // console.log("flag", country_data)
-    })
-    .catch(err => {
-        console.error(err);
-    });
+// fetch(`https://restcountries.eu/rest/v2/all`)
+//     .then(response => {
+//         return response.json();
+//     })
+//     .then(response => {
+//         country_data = response
+//         // console.log("flag", country_data)
+//     })
+//     .catch(err => {
+//         console.error(err);
+//     });
 
 fetch(`https://vaccovid-coronavirus-vaccine-and-treatment-tracker.p.rapidapi.com/api/npm-covid-data/`
     , {
@@ -42,19 +42,20 @@ fetch(`https://vaccovid-coronavirus-vaccine-and-treatment-tracker.p.rapidapi.com
     })
     .then(response => {
         let data = response
+        console.log('hello', data)
 
-        for (let i = 0; i < data.length; i++) {
-            for (let j = 0; j < country_data.length; j++) {
-                if (data[i].TwoLetterSymbol == country_data[j].alpha2Code.toLowerCase()) {
-                    data[i]['flag'] = country_data[j].flag
-                    arr.push(data[i])
-                    break
-                }
-            }
-        }
+        // for (let i = 0; i < data.length; i++) {
+        //     for (let j = 0; j < country_data.length; j++) {
+        //         if (data[i].TwoLetterSymbol == country_data[j].alpha2Code.toLowerCase()) {
+        //             data[i]['flag'] = country_data[j].flag
+        //             arr.push(data[i])
+        //             break
+        //         }
+        //     }
+        // }
         // console.log(arr)
         // ShowData(arr, container)
-        ShowData(arr,container)
+        ShowData(data, container)
 
     })
     .catch(err => {
@@ -64,7 +65,7 @@ fetch(`https://vaccovid-coronavirus-vaccine-and-treatment-tracker.p.rapidapi.com
 
 
 
- 
+
 
 
 
@@ -88,15 +89,13 @@ function ShowData(arr, container) {
       </select>
     </div>`
     container.append(sort_div)
-   
+
     let display_div = document.createElement('div')
     display_div.id = 'display'
 
     for (let i = 0; i < arr.length; i++) {
 
-        let {
-            id, rank, Country, Continent, TwoLetterSymbol, ThreeLetterSymbol, Infection_Risk, Case_Fatality_Rate, Test_Percentage, Recovery_Proporation, TotalCases, NewCases, TotalDeaths, NewDeaths, TotalRecovered, NewRecovered, ActiveCases, TotalTests, Population, one_Caseevery_X_ppl, one_Deathevery_X_ppl, one_Testevery_X_ppl, Deaths_1M_pop, Serious_Critical, Tests_1M_Pop, TotCases_1M_Pop, flag
-        } = arr[i]
+        let {id, rank, Country, Continent, TwoLetterSymbol, ThreeLetterSymbol, Infection_Risk, Case_Fatality_Rate, Test_Percentage, Recovery_Proporation, TotalCases, NewCases, TotalDeaths, NewDeaths, TotalRecovered, NewRecovered, ActiveCases, TotalTests, Population, one_Caseevery_X_ppl, one_Deathevery_X_ppl, one_Testevery_X_ppl, Deaths_1M_pop, Serious_Critical, Tests_1M_Pop, TotCases_1M_Pop,} = arr[i]
 
 
 
@@ -104,17 +103,17 @@ function ShowData(arr, container) {
         item_container.className = 'item'
 
 
-        let img_item = document.createElement('div')
-        img_item.className = 'sub-item-img'
+        // let img_item = document.createElement('div')
+        // img_item.className = 'sub-item-img'
 
         let other_item = document.createElement('div')
         other_item.className = 'sub-item-other'
 
-        let img = document.createElement('div')
-        img.addEventListener('click',abc)
-        function abc(){
-            showDetail(arr[i])
-        }
+        // let img = document.createElement('div')
+        // img.addEventListener('click', abc)
+        // function abc() {
+        //     showDetail(arr[i])
+        // }
         let country = document.createElement('div')
         let total = document.createElement('div')
         let recovered = document.createElement('div')
@@ -128,7 +127,7 @@ function ShowData(arr, container) {
         })
 
 
-        img.innerHTML = `<a href="#"><img src=${flag} alt=""></a>`
+        // img.innerHTML = `<a href="#"><img src=${flag} alt=""></a>`
         country.innerHTML = `<a href="#">Name -- ${Country}</a>`
         total.innerHTML = `<a href="#">Total Cases -- ${TotalCases}</a>`
         recovered.innerHTML = `<a href="#">Total Recovered -- ${TotalRecovered}</a>`
@@ -136,9 +135,9 @@ function ShowData(arr, container) {
         active.innerHTML = `<a href="#">Active Cases -- ${ActiveCases}</a>`
 
 
-        img_item.append(img)
+        // img_item.append(img)
         other_item.append(country, total, recovered, death, active, more_btn)
-        item_container.append(img_item, other_item)
+        item_container.append( other_item)
         display_div.append(item_container)
         // container.append(sort_div,display_div)
         container.append(display_div)

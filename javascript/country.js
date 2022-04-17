@@ -205,14 +205,14 @@ td53.textContent = 'Total Cases On Per Million Population'
 td54.textContent = TotCases_1M_Pop
 tr27.append(td53,td54)
 
-let tr28 = document.createElement('tr')
-let td55 = document.createElement('td')
-let td56 = document.createElement('td')
-td55.textContent = 'National Flag'
-td56.innerHTML = `<img src = ${flag} width = "100" alt=${Country}>`
-tr28.append(td55,td56)
+// let tr28 = document.createElement('tr')
+// let td55 = document.createElement('td')
+// let td56 = document.createElement('td')
+// td55.textContent = 'National Flag'
+// td56.innerHTML = `<img src = ${flag} width = "100" alt=${Country}>`
+// tr28.append(td55,td56)
 
-tbody.append(tr28,tr3,tr2,tr4,tr5,tr6,tr7,tr8,tr9,tr10,tr11,tr12,tr13,tr14,tr15,tr16,tr17,tr18,tr19,tr20,tr22,tr23,tr24,tr25,tr26,tr27,tr1)
+tbody.append(tr3,tr2,tr4,tr5,tr6,tr7,tr8,tr9,tr10,tr11,tr12,tr13,tr14,tr15,tr16,tr17,tr18,tr19,tr20,tr22,tr23,tr24,tr25,tr26,tr27,tr1)
 
 
 table.append(tbody)
