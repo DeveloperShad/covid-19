@@ -86,6 +86,11 @@ font-size: 19px;
     flex-direction: column;
     gap: 10px;
     /* background: rgb(209, 209, 209); */
+   
+}
+
+.item .sub-item-other div{
+    padding: 10px;
 }
 
 
